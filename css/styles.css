@@ -1,0 +1,130 @@
+/* General */
+body {
+  font-family: 'Sans-Serif';
+  font-weight: 500; }
+
+.container-general {
+  padding: 0px; }
+
+/* Top Bar */
+.navbar-brand {
+  color: #57c5a0 !important; }
+
+.navbar-brand:hover {
+  color: #fff !important;
+  transition: .5s; }
+
+.search-icon:hover {
+  cursor: pointer; }
+
+/* Main Menu */
+.main-menu a.nav-link {
+  font-size: 20px;
+  font-weight: 600;
+  padding-right: 3rem !important;
+  color: #6c757d; }
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: #57c5a0; }
+
+.main-menu a.nav-link:hover {
+  color: #57c5a0 !important;
+  transition: .5s; }
+
+.cart-badge {
+  background-color: #57c5a0; }
+
+.fa-shopping-cart:before {
+  color: #6c757d;
+  padding: 2px;
+  padding: 1rem; }
+
+.fa-star:before {
+  color: #6c757d;
+  padding: 1rem; }
+
+.badge-secondary {
+  color: #fff;
+  font-size: 16px;
+  padding: 6px 14px; }
+
+/* Carousel */
+.container-carousel {
+  padding: 0px; }
+
+.carousel-indicators li {
+  width: 18rem;
+  height: 10px;
+  background-color: #57c5a0; }
+
+ol.carousel-indicators {
+  position: relative; }
+
+ol.carousel-indicators.text-center {
+  margin: 0 auto; }
+
+.indicators-container {
+  padding: 1rem 0;
+  background-color: #2e2e2e; }
+
+.text-indicators {
+  width: 18rem;
+  color: #6c757d;
+  font-size: 24px; }
+
+.text-indicators:hover {
+  color: #fff;
+  transition: .5s;
+  cursor: pointer; }
+
+.subtext-indicators {
+  font-size: 18px;
+  color: #6c757d; }
+
+/* Static Content */
+.thumbnail {
+  position: relative;
+  width: 100%; }
+
+p.offers-text {
+  color: #fff;
+  font-size: 26px;
+  background-color: rgba(46, 46, 46, 0.9);
+  padding: 20px 0px; }
+
+.category-image img {
+  width: 100%; }
+
+.row-offers {
+  padding: 1rem 0;
+  background-color: #242424; }
+
+.container-offers {
+  background-color: #242424; }
+
+#products {
+  padding-top: 3em; }
+
+#products h3 {
+  padding-bottom: 1em; }
+
+.product-bottom-section {
+  border-top: 1px solid #cccccc; }
+
+.product-sale-badge {
+  left: 74%;
+  position: absolute;
+  padding: 30px 10px 30px 10px;
+  border-radius: unset;
+  background-color: #57c5a0; }
+
+.product-price-badge {
+  position: absolute;
+  padding: 40px 20px 40px 20px;
+  border-radius: unset;
+  overflow: overlay;
+  background-color: #57c5a0;
+  bottom: 2%;
+  left: 3%; }
+
+/*# sourceMappingURL=styles.css.map */

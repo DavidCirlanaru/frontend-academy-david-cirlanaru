@@ -1,6 +1,12 @@
+$strong-dark :  #242424;
+$light-dark : #2e2e2e;
+$container-space: 3em;
+$border-color: #cccccc;
+$turqoise: #57c5a0;
+
 /* General */
 body {
-    font-family: 'Aller';
+    font-family: 'Sans-Serif';
     font-weight: 500;
 }
 
@@ -79,7 +85,8 @@ ol.carousel-indicators.text-center {
 }
 
 .indicators-container {
-    background-color: #2e2e2e;
+    padding: 1rem 0;
+    background-color: $light-dark;
 }
 
 .text-indicators {
@@ -96,4 +103,63 @@ ol.carousel-indicators.text-center {
 .subtext-indicators {
     font-size: 18px;
     color: #6c757d;
+}
+
+/* Static Content */
+.thumbnail {
+    position: relative;
+    width:100%
+}
+
+p.offers-text {
+    color: #fff;
+    font-size: 26px;
+    background-color: rgba(46, 46, 46, 0.9);
+    padding: 20px 0px;
+    
+}
+
+.category-image img {
+    width: 100%;
+}
+
+.row-offers {
+    padding: 1rem 0;
+    background-color: #242424;
+}
+
+.container-offers {
+    background-color: $strong-dark;
+}
+
+
+// Products
+#products {
+    padding-top: $container-space;
+}
+
+#products h3 {
+    padding-bottom:1em;
+}
+
+.product-bottom-section {
+    border-top: 1px solid $border-color;
+}
+
+.product-sale-badge {
+    left: 74%;
+    position: absolute;
+    padding: 30px 10px 30px 10px;
+    border-radius: unset;
+    background-color: $turqoise;
+}
+
+.product-price-badge {
+    position: absolute;
+    padding: 40px 20px 40px 20px;
+    border-radius: unset;
+    overflow: overlay;
+    background-color: #57c5a0;
+    bottom: 2%;
+    left: 3%;
 }
