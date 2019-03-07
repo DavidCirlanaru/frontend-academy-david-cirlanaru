@@ -1,7 +1,7 @@
 /* General */
 body {
-  font-family: 'Sans-Serif';
-  font-weight: 500; }
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #ebe7df; }
 
 .container-general {
   padding: 0px; }
@@ -18,6 +18,9 @@ body {
   cursor: pointer; }
 
 /* Main Menu */
+.main-menu {
+  background-color: #fff; }
+
 .main-menu a.nav-link {
   font-size: 20px;
   font-weight: 600;
@@ -106,25 +109,70 @@ p.offers-text {
   padding-top: 3em; }
 
 #products h3 {
-  padding-bottom: 1em; }
+  padding-bottom: 0.8rem; }
 
 .product-bottom-section {
   border-top: 1px solid #cccccc; }
 
+.card-body {
+  padding: 1rem !important; }
+
 .product-sale-badge {
   left: 74%;
   position: absolute;
-  padding: 30px 10px 30px 10px;
+  padding: 30px 10px;
   border-radius: unset;
-  background-color: #57c5a0; }
+  background-color: #242424; }
 
 .product-price-badge {
   position: absolute;
-  padding: 40px 20px 40px 20px;
+  padding: 30px 10px;
   border-radius: unset;
   overflow: overlay;
   background-color: #57c5a0;
   bottom: 2%;
   left: 3%; }
+
+p.product-title {
+  position: relative;
+  left: 30%;
+  margin: 0; }
+
+.container.line-break {
+  margin-bottom: 2rem; }
+
+.blog-boxes {
+  background-color: #dfdbd4;
+  height: 100%; }
+
+.col-md-12.blog-boxes {
+  border: none;
+  padding-top: 20px;
+  padding-right: 20px; }
+
+.blog-boxes p {
+  font-size: 14px;
+  font-weight: 500; }
+
+.blog-boxes h3 {
+  font-size: 26px;
+  font-weight: 500; }
+
+span.badge.badge-secondary.date-badge {
+  padding: 10px;
+  border-radius: unset;
+  background-color: #57c5a0; }
+
+.blog-text-column p {
+  margin: 0;
+  font-size: 16px; }
+
+.blog-text-column h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold; }
+
+.col-md-10.blog-text-column {
+  padding-left: unset; }
 
 /*# sourceMappingURL=styles.css.map */
