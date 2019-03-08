@@ -1,3 +1,19 @@
+// Fonts
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/Aller.ttf'),
+    url('../fonts/Aller_It.ttf'),
+    url('../fonts/Aller_BdIt.ttf'),
+    url('../fonts/AllerDisplay.ttf'),
+    url('../fonts/Aller_Rg.ttf');
+  }
+
+  @font-face {
+      font-family: 'Myriad Pro';
+      src: url('../fonts/MyriadPro-Regular.otf');
+  }
+
+// Colors
 $strong-dark :  #242424;
 $light-dark : #2e2e2e;
 $container-space: 3em;
@@ -5,9 +21,13 @@ $border-color: #cccccc;
 $green: #57c5a0;
 $background-white: #ebe7df;
 $blog-grey: #dfdbd4;
+$footer-paragraph: #939393;
+$footer-heading: #7d7d7d;
+$footer-dates: #a4a5a0;
+
 /* General */
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Aller', sans-serif;
     background-color: $background-white;
 }
 
@@ -192,14 +212,16 @@ p.product-title {
 
 .col-md-12.blog-boxes {
     border: none;
-    padding-top: 20px;
-    padding-right: 20px;
+    padding-top: 35px;
+    padding-right: 35px;
+    padding-bottom: 15px;
    
 }
 
 .blog-boxes p {
     font-size: 14px;
     font-weight: 500;
+    font-family: 'Myriad Pro' !important;
 }
 
 .blog-boxes h3 {
@@ -216,7 +238,8 @@ span.badge.badge-secondary.date-badge {
 
 .blog-text-column p {
     margin: 0;
-    font-size: 16px
+    font-size: 16px;
+    
 
 }
 .blog-text-column h5 {
@@ -227,4 +250,136 @@ span.badge.badge-secondary.date-badge {
 
 .col-md-10.blog-text-column {
     padding-left: unset;
+}
+
+.blog-container {
+    margin-bottom: 2rem;
+}
+
+// Footer Section
+.footer-section {
+    background-color: $strong-dark;
+    padding: 5rem 0;
+}
+
+.footer-section p {
+    color: $footer-paragraph;
+    font-size: 14px;
+}
+
+.footer-section h3 {
+    color: $footer-heading;
+    margin-bottom: 2rem;
+    font-size: 22px;
+}
+
+.twitter-date {
+    color: $footer-dates;
+    font-size: 13px;
+}
+
+.twitter-date:hover {
+    color: #fff;
+    transition: .7s;
+    cursor: pointer;
+}
+
+.twitter-link {
+    color: $green;
+    transition: .8s;
+}
+
+.twitter-link:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+img.img-fluid.flickr-widget {
+    width: 100%;
+}
+
+.modal-body.modal-body-popup {
+    background-color: $strong-dark !important;
+    border-radius: 20px;
+}
+
+.modal-content.modal-pupup {
+    background-color:$strong-dark !important;
+}
+.modal-content.modal-pupup span {
+    color: #fff;
+}
+
+.flickr-col {
+    padding-left: 0;
+}
+
+body.modal-open {
+    overflow: visible;
+}
+
+.footer-linebreak {
+    border: 1px solid $light-dark;
+}
+
+// Social Media & Newsletter Section
+input.form-control.email-input {
+    padding: 25px !important;
+    border-radius: unset;
+    background-color: $light-dark;
+    border-color: $strong-dark;
+}
+
+span.input-group-btn.submit-button {
+    background-color: $footer-heading;
+    padding: 6px;
+    transition: .8s;
+}
+
+span.input-group-btn.submit-button:hover {
+    background-color: $green;
+    transition: .8s;
+}
+
+.row.justify-content-between.row-social-media {
+    padding-top: 2rem;
+}
+
+.social-icon {
+    font-size: 50px;
+    color: grey;
+    transition: .8s;
+    border-radius: unset;
+
+}
+
+.social-icon:hover {
+    color: #fff;
+    transition: .8s;
+    cursor: pointer;
+}
+
+.container-fluid.copyright-section {
+    padding: 1.2rem;
+    color: $footer-paragraph;
+    background-color: $light-dark;
+}
+
+.footer-menu p {
+    margin: 0px;
+}
+
+.copyright-col p {
+    margin: 0px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: grey !important;
+    transition: .8s;
+}
+
+.footer-menu a:hover {
+    color: #fff !important;
+    transition: .8s;
 }
