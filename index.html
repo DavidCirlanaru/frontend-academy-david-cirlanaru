@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>FooShoes</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,31 +21,65 @@
     <div class="container">
       <a class="navbar-brand logo" href="#">FOOSESHOES</a>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item ml-auto">
+        <li class="nav-item ml-auto mr-1">
           <div class="form-group search-container">
             <div class="input-group">
-              <input class="form-control search-input" id="email" placeholder="SEARCH" name="email" type="text" />
-              <div class="input-group-addon search-icon">
-                <div class="dropdown">
-                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-search"></i>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">MEN SHOES</a>
-                    <a class="dropdown-item" href="#">KIDS</a>
-                  </div>
-                </div>
-              </div>
+                <form role="form">
+                    <div class="input-group">
+                        <input id="searchInput" data-toggle="dropdown" type="text" class="form-control search-input" placeholder="SEARCH">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle search-button" data-toggle="dropdown">
+                                <i class="fas fa-search search-icon"></i>
+                            </button>
+                            <ul id="search-dropdown-menu" class="dropdown-menu dropdown-menu-right" role="menu">
+                                <a class="dropdown-item" href="#">MAN SHOES</a>
+                                <a class="dropdown-item" href="#">KIDS</a>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+              
             </div>
           </div>
         </li>
         <li class="nav-item login-link">
-          <a class="nav-link" href="#">LOGIN or REGISTER</a>
+          <a  class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">LOGIN or REGISTER</a>
         </li>
       </ul>
     </div>
   </nav>
+
+  <!-- Login Popup -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login or Register</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Email:</label>
+              <input type="email" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Password:</label>
+              <input type="password" class="form-control"></input>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary register-button mr-auto" data-dismiss="modal">Register</button>
+          <button type="button" class="btn btn-secondary close-button" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary login-button">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light main-menu static-top">
     <div class="container">
@@ -189,7 +224,7 @@
             style="display: none">ON SALE!</span>
           <img class="card-img-top" src="img/item1.png" alt="Card image cap">
           <div class="card-body product-bottom-section text-right product-title-container">
-            <div class="d-flex  align-items-center ">
+            <div class="d-flex align-items-center ">
               <span class="badge badge-secondary product-price-badge">$145.99</span>
               <p class="product-title" style="display: inline">Even & Odd</p>
             </div>
@@ -212,11 +247,11 @@
               <p class="product-title">Even & Odd</p>
             </div>
             <div class="btn-group product-icons" style="display: none">
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-share-square"></i>
-                <i class="fas fa-shopping-cart"></i>
-              </div>
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-share-square"></i>
+              <i class="fas fa-shopping-cart"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -231,11 +266,11 @@
               <p class="product-title">Even & Odd</p>
             </div>
             <div class="btn-group product-icons" style="display: none">
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-share-square"></i>
-                <i class="fas fa-shopping-cart"></i>
-              </div>
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-share-square"></i>
+              <i class="fas fa-shopping-cart"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -260,11 +295,11 @@
               <p class="product-title">Even & Odd</p>
             </div>
             <div class="btn-group product-icons" style="display: none">
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-share-square"></i>
-                <i class="fas fa-shopping-cart"></i>
-              </div>
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-share-square"></i>
+              <i class="fas fa-shopping-cart"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -279,11 +314,11 @@
               <p class="product-title">Even & Odd</p>
             </div>
             <div class="btn-group product-icons" style="display: none">
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-share-square"></i>
-                <i class="fas fa-shopping-cart"></i>
-              </div>
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-share-square"></i>
+              <i class="fas fa-shopping-cart"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -297,11 +332,11 @@
               <p class="product-title">Even & Odd</p>
             </div>
             <div class="btn-group product-icons" style="display: none">
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-share-square"></i>
-                <i class="fas fa-shopping-cart"></i>
-              </div>
+              <i class="fas fa-eye"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-share-square"></i>
+              <i class="fas fa-shopping-cart"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -335,24 +370,69 @@
       </div>
 
       <div class="col-md-6 blog-col">
-        <div class="col-md-12 blog-boxes ">
+        <div id="blog-news" class="col-md-12 blog-boxes">
           <h3 class="mb-4">BLOG NEWS</h3>
-          <div class="row align-items-center blog-titles">
+          <div class="row align-items-center blog-titles mt-3">
             <div class="col-md-2">
-              <span class="badge badge-secondary date-badge">APR<br>01 </span>
+              <span class="badge badge-secondary date-badge">APR<br>10</span>
             </div>
-            <div class="col-md-10  blog-text-column">
-              <h5>Nice & Clean. The best for your blog! </h5>
+            <div class="col-md-10  blog-text-column" >
+              <h5>#1 Nice & Clean. The best for your blog! </h5>
               <p>Lorem Ipsum is simply dummy text of the printing.</p>
             </div>
           </div>
           <div class="row align-items-center blog-titles mt-3">
             <div class="col-md-2">
-              <span class="badge badge-secondary date-badge">APR<br>01 </span>
+              <span class="badge badge-secondary date-badge">APR<br>11</span>
             </div>
             <div class="col-md-10 blog-text-column">
-              <h5>What an Ecommerce theme! </h5>
+              <h5>#2 What an Ecommerce theme! </h5>
               <p>Lorem Ipsum has been the standard dummy text.</p>
+            </div>
+          </div>
+          <div class="row align-items-center blog-titles mt-3">
+            <div class="col-md-2">
+              <span class="badge badge-secondary date-badge">APR<br>12</span>
+            </div>
+            <div class="col-md-10 blog-text-column">
+              <h5>#3 New content every 5 seconds!</h5>
+              <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
+            </div>
+          </div>
+          <div class="row align-items-center blog-titles mt-3">
+            <div class="col-md-2">
+              <span class="badge badge-secondary date-badge">APR<br>13</span>
+            </div>
+            <div class="col-md-10 blog-text-column">
+              <h5>#4 New content every 5 seconds!</h5>
+              <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
+            </div>
+          </div>
+          <div class="row align-items-center blog-titles mt-3">
+            <div class="col-md-2">
+              <span class="badge badge-secondary date-badge">APR<br>14</span>
+            </div>
+            <div class="col-md-10 blog-text-column">
+              <h5>#5 What an Ecommerce theme!</h5>
+              <p>Lorem Ipsum has been the standard dummy text.</p>
+            </div>
+          </div>
+          <div class="row align-items-center blog-titles mt-3">
+            <div class="col-md-2">
+              <span class="badge badge-secondary date-badge">APR<br>15</span>
+            </div>
+            <div class="col-md-10 blog-text-column">
+              <h5>#6 New content every 5 seconds!</h5>
+              <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
+            </div>
+          </div>
+          <div class="row align-items-center blog-titles mt-3">
+            <div class="col-md-2">
+              <span class="badge badge-secondary date-badge">APR<br>16</span>
+            </div>
+            <div class="col-md-10 blog-text-column">
+              <h5>#7 New content every 5 seconds!</h5>
+              <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
             </div>
           </div>
         </div>
