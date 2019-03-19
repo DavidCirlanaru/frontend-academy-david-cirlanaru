@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>FooShoes</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico" sizes="64x64"/>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,33 +24,35 @@
         <li class="nav-item ml-auto mr-1">
           <div class="form-group search-container">
             <div class="input-group">
-                <form role="form">
-                    <div class="input-group">
-                        <input id="searchInput" data-toggle="dropdown" type="text" class="form-control search-input" placeholder="SEARCH">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle search-button" data-toggle="dropdown">
-                                <i class="fas fa-search search-icon"></i>
-                            </button>
-                            <ul id="search-dropdown-menu" class="dropdown-menu dropdown-menu-right" role="menu">
-                                <a class="dropdown-item" href="#">MAN SHOES</a>
-                                <a class="dropdown-item" href="#">KIDS</a>
-                            </ul>
-                        </div>
-                    </div>
-                </form>
-              
+              <form role="form">
+                <div class="input-group">
+                  <input id="searchInput" data-toggle="dropdown" type="text" class="form-control search-input"
+                    placeholder="SEARCH">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle search-button" data-toggle="dropdown">
+                      <i class="fas fa-search search-icon"></i>
+                    </button>
+                    <ul id="search-dropdown-menu" class="dropdown-menu dropdown-menu-right" role="menu">
+                      <a class="dropdown-item" href="#">MAN SHOES</a>
+                      <a class="dropdown-item" href="#">KIDS</a>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+
             </div>
           </div>
         </li>
         <li class="nav-item login-link">
-          <a  class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">LOGIN or REGISTER</a>
+          <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">LOGIN or REGISTER</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <!-- Login Popup -->
-  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -63,7 +65,7 @@
           <form>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Email:</label>
-              <input type="email" class="form-control" id="recipient-name">
+              <input type="text" class="form-control" id="recipient-name">
             </div>
             <div class="form-group">
               <label for="message-text" class="col-form-label">Password:</label>
@@ -376,7 +378,7 @@
             <div class="col-md-2">
               <span class="badge badge-secondary date-badge">APR<br>10</span>
             </div>
-            <div class="col-md-10  blog-text-column" >
+            <div class="col-md-10  blog-text-column">
               <h5>#1 Nice & Clean. The best for your blog! </h5>
               <p>Lorem Ipsum is simply dummy text of the printing.</p>
             </div>
@@ -444,7 +446,7 @@
   <!-- Footer Section-->
   <div class="container-fluid footer-section">
     <div class="container">
-      <div class="row">
+      <div class="row row-eq-height">
         <div class="col-md-4">
           <h3>TEXT WIDGET</h3>
           <p class="text-justify"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -453,16 +455,20 @@
               containing Lorem Ipsum tandard dummy text ever since the 1500s.</i></p>
         </div>
 
-        <div class="col-md-4">
+        <div id="tweets-container" class="col-md-4">
           <h3>TWITTER WIDGET</h3>
-          <p class="text-justify"><span class="twitter-link"><i>@ericafustero</span> Why thank you. Your work looks
-            awesome by the way! <span class="twitter-link">@treemelody</i></span></p><span class="twitter-date">19
-            days
-            ago</span>
-
-          <p><br><i><span class="twitter-link">@roymarvelous</span> You can seek a refund through TF if it is not as
-              advertised
-              - but it is :)</i></p><span class="twitter-date">19 days ago</span>
+          <div class="tweet">
+            <a class="twitter-timeline" 
+            href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw" data-width="auto"
+            data-height="auto" data-link-color="#57c5a0" data-theme="dark" data-chrome="transparent noscrollbar nofooter">
+            National Park Tweets - Curated tweets by TwitterDev</a> 
+          </div>
+          <div class="tweet">
+              <a class="twitter-timeline" 
+              href="https://twitter.com/NYTNow/timelines/576828964162965504?ref_src=twsrc%5Etfw" data-width="auto"
+              data-height="auto" data-link-color="#57c5a0" data-theme="dark" data-chrome="transparent noscrollbar nofooter">
+              National Park Tweets - Curated tweets by TwitterDev</a> 
+            </div>
         </div>
 
         <div class="col-md-4">
@@ -513,14 +519,16 @@
     <div class="container social-media-section">
       <div class="row justify-content-between row-social-media">
         <div class="col-md-4 text-white">
+          <form id="newsletter-form" class="needs-validation"  action="#" method="post">
           <div class="input-group">
-            <input type="text" class="form-control email-input" placeholder="Enter email for newsletter">
+            <input id="email-input" type="text" class="form-control email-input" placeholder="Enter email for newsletter">
             <span class="input-group-btn submit-button">
-              <button class="btn btn-default" type="submit">
+              <button id="submit-button" type="submit" class="btn">
                 <i class="fas fa-angle-right"></i>
               </button>
             </span>
           </div>
+        </form>
         </div>
 
         <div class="col-md-4 text-white text-center ">
@@ -571,6 +579,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </body>
 

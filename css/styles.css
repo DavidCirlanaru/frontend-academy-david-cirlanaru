@@ -412,25 +412,23 @@ span.badge.badge-secondary.date-badge {
   margin-bottom: 2rem;
   font-size: 22px; }
 
-.twitter-date {
-  color: #a4a5a0;
-  font-size: 13px; }
+.tweet {
+  display: none;
+  opacity: 0;
+  transition: all 1s ease-in-out; }
 
-.twitter-date:hover {
-  color: #fff;
-  transition: .7s;
-  cursor: pointer; }
+.tweet.show {
+  display: block; 
+}
 
-.twitter-link {
-  color: #57c5a0;
-  transition: .8s; }
+.tweet.animate {
+  opacity: 1; 
+}
 
-.twitter-link:hover {
-  color: #fff;
-  cursor: pointer; }
 
 img.img-fluid.flickr-widget {
-  width: 100%; }
+  width: 100%; 
+}
 
 .modal-body.modal-body-popup {
   background-color: #242424 !important;

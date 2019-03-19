@@ -531,6 +531,20 @@ span.badge.badge-secondary.date-badge {
     font-size: 22px;
 }
 
+.tweet {
+    display: none;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.tweet.show {
+    display: block;
+}
+
+.tweet.animate {
+    opacity: 1;
+}
+
 .twitter-date {
     color: $footer-dates;
     font-size: 13px;
@@ -550,6 +564,10 @@ span.badge.badge-secondary.date-badge {
 .twitter-link:hover {
     color: #fff;
     cursor: pointer;
+}
+
+  .timeline-Header-title {
+    color: #fff;
 }
 
 img.img-fluid.flickr-widget {

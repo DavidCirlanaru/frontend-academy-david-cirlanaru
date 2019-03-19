@@ -3,24 +3,22 @@ $(document).ready(function () {
 	//search input dropdown
 	document.getElementById("searchInput").oninput = function () {
 		$(this).next('.dropdown-menu').find('[data-toggle=dropdown]').dropdown('toggle');
-		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function () {
-			if (this.readyState == 4 && this.status == 200) {
-				// Typical action to be performed when the document is ready:
-				var response = JSON.parse(xhttp.responseText);
-				var suggestions = response.products;
-
-				var output = '';
-				for (var i = 0; i < suggestions.length; i++) {
-					output += '<a class="dropdown-item" href="#">' + suggestions[i].name + '</a>'
-				}
+		let output = '';
+		$.ajax({
+			type: 'GET',
+			url: 'suggestions.json',
+			dataType: 'json',
+			success: function(data) {
+				$.each(data, function(index, item){
+					$.each(item, function(key, value){
+						output += '<a class="dropdown-item" href="#">' + value.name + '</a>';
+					});
+				});
 				document.getElementById('search-dropdown-menu').innerHTML = output;
 			}
-		};
-		xhttp.open("GET", "../suggestions.json", true);
-		xhttp.send();
+		});
 
-	}
+	} // /search input dropdown
 
 	//carousel indicators click 
 	$("#first-indicator").click(function () {
@@ -54,7 +52,7 @@ $(document).ready(function () {
 
 		$('.first-text-indicator').css("color", "#979797");
 		$('.second-text-indicator').css("color", "#979797");
-	});
+	}); // /carousel indicators
 
 	//products title hover
 	$('.product-title-container')
@@ -75,19 +73,20 @@ $(document).ready(function () {
 			//prevents the default behavior of jumping at the top of the page
 			e.preventDefault();
 		});
-	});
+	}); // /flickr images
 
+	//blog articles change every 5 seconds
 	let articles_per_page = 2;
-	let total_time = 5000;
+	let total_article_time = 5000;
 
 	let articles_number = $('#blog-news .blog-titles').length;
 	let total_news_pages = Math.ceil(articles_number / articles_per_page);
-	let page = 0;
-	let time_interval = 0;
+	let article_page = 0;
+	let article_time_interval = 0;
 	
 	let displayNews = function() {
-		let timer = setInterval(function() {
-			page = (page >= total_news_pages) ? 1 : ++page;
+		let article_timer = setInterval(function() {
+			article_page = (article_page >= total_news_pages) ? 1 : ++article_page;
 
 			$el = $('#blog-news').children('.blog-titles.show');
 			$el.removeClass('animate');
@@ -96,10 +95,10 @@ $(document).ready(function () {
 				$el.removeClass('show');
 
 				for (let i = 0; i < articles_per_page; i++) {
-					let index = (page - 1) * articles_per_page + i;
-					let $el = $('#blog-news').children('.blog-titles').eq(index);
+					let article_index = (article_page - 1) * articles_per_page + i;
+					let $el = $('#blog-news').children('.blog-titles').eq(article_index);
 		
-					// bad attempt to make sure the animation takes effect after the class is appended.
+					// messy attempt to make sure the animation takes effect after the class is appended.
 					$el.addClass('show');
 					setTimeout(function() {
 						$el.addClass('animate');
@@ -107,27 +106,91 @@ $(document).ready(function () {
 				}
 			}, 1000);
 
-			if (time_interval == 0) {
-				time_interval = total_time;
-				clearInterval(timer);
+			if (article_time_interval == 0) {
+				article_time_interval = total_article_time;
+				clearInterval(article_timer);
 				displayNews();
 			}
-		}, time_interval);
+		}, article_time_interval);
 	}
-	displayNews();
+	displayNews(); // /blog articles
 
-	// mail validation/save
+	//tweets appear every 10 seconds
+	let tweets_per_page = 1;
+	let total_tweet_time = 10000;
+
+	let tweets_number = $('#tweets-container .tweet').length;
+	let total_tweets_pages = Math.ceil(tweets_number / tweets_per_page);
+	let tweet_page = 0;
+	let tweet_time_interval = 0;
 	
+	let displayTweets = function() {
+		let tweet_timer = setInterval(function() {
+			tweet_page = (tweet_page >= total_tweets_pages) ? 1 : ++tweet_page;
 
+			$tweet_el = $('#tweets-container').children('.tweet.show');
+			$tweet_el.removeClass('animate');
 
+			setTimeout(function() {
+				$tweet_el.removeClass('show');
 
+				for (let i = 0; i < tweets_per_page; i++) {
+					let tweet_index = (tweet_page - 1) * tweets_per_page + i;
+					let $tweet_el = $('#tweets-container').children('.tweet').eq(tweet_index);
+		
+					// messy attempt to make sure the animation takes effect after the class is appended.
+					$tweet_el.addClass('show');
+					setTimeout(function() {
+						$tweet_el.addClass('animate');
+					}, 10);
+				}
+			}, 1000);
 
+			if (tweet_time_interval == 0) {
+				tweet_time_interval = total_tweet_time;
+				clearInterval(tweet_timer);
+				displayTweets();
+			}
+		}, tweet_time_interval);
+	}
+	displayTweets();// /tweets
 
+	//submit email
+	$('#newsletter-form').submit(function(event) {
+		let email_input = { 
+			email: $('#email-input').val() 
+		};
 
+		//sending data to emails.php file
+		$.post("emails.php", email_input).done(function(data) {
+			//converts the json response into a js object
+			var data = $.parseJSON(data);
 
+			//if there are no errors show mail received
+			if (data.success == true) {
+				$('#email-input').val('Mail received!');
+				$('#email-input').addClass('is-valid')
+				setTimeout(function(){ 
+					$('#email-input').val('');
+					$('#email-input').removeClass('is-valid');  
+			}, 2000);
+			}else {
+				$('#email-input').addClass('is-invalid');
+				$('#email-input').val('Incorrect mail format. Try again');
+				setTimeout(function(){ 
+					$('#email-input').val(''); 
+					$('#email-input').removeClass('is-invalid'); 
+				}
+				, 2000);
+				
+			}
+		});
 
+		//prevent the refresh page on submit
+		event.preventDefault();
+		return false;
+	});
 
-
-
+	
 });
 
