@@ -169,7 +169,8 @@ $(document).ready(function () {
 			//if there are no errors show mail received
 			if (data.success == true) {
 				$('#email-input').val('Mail received!');
-				$('#email-input').addClass('is-valid')
+				$('#email-input').addClass('is-valid');
+				//timeout for the input to get back to normal state
 				setTimeout(function(){ 
 					$('#email-input').val('');
 					$('#email-input').removeClass('is-valid');  
@@ -177,6 +178,7 @@ $(document).ready(function () {
 			}else {
 				$('#email-input').addClass('is-invalid');
 				$('#email-input').val('Incorrect mail format. Try again');
+				//timeout for the input to get back to normal state
 				setTimeout(function(){ 
 					$('#email-input').val(''); 
 					$('#email-input').removeClass('is-invalid'); 
@@ -191,6 +193,16 @@ $(document).ready(function () {
 		return false;
 	});
 
+	//grid/list products
+	$('#list').click(function(event){
+		event.preventDefault();
+		$('.products-row').addClass('list-group');
+	});
+
+	$('#grid').click(function(event){
+		event.preventDefault();
+		$('.products-row').removeClass('list-group');
+	});
 	
 });
 

@@ -7,7 +7,7 @@
 /* General */
 body {
   font-family: 'Aller', sans-serif;
-  background-color: #ebe7df; }
+  background-color: #fff; }
 
 .container-general {
   padding: 0px; }
@@ -18,7 +18,8 @@ body {
   padding: 10px; }
 
 .navbar-brand {
-  color: #57c5a0 !important; }
+  color: #57c5a0 !important;
+  font-family: 'Myriad Pro'; }
 
 .navbar-brand:hover {
   color: #fff !important;
@@ -52,11 +53,16 @@ button.btn.btn-default.dropdown-toggle.search-button {
   box-shadow: unset;
   padding: 2px; }
 
+.filter-heading {
+  color: #fff;
+  font-family: 'Myriad Pro';
+  margin: 0; }
+
 button#dropdownMenuButton {
   color: #dfdbd4; }
 
 .dropdown-menu.show {
-  background-color: #4c4c4c; }
+  background-color: #242424; }
 
 a.dropdown-item {
   color: #aaaaaa;
@@ -64,7 +70,7 @@ a.dropdown-item {
 
 .dropdown-item:focus, .dropdown-item:hover {
   background-color: unset;
-  color: #ffffff;
+  color: #57c5a0;
   transition: .8s; }
 
 .search-icon:hover {
@@ -206,11 +212,19 @@ ol.carousel-indicators {
 ol.carousel-indicators.text-center {
   margin: 0 auto; }
 
-.carousel-caption.d-none.d-md-block {
+.homepage-caption .carousel-caption {
   width: 35%;
   text-align: left;
   color: #242424;
   top: 15%;
+  left: 55%;
+  font-family: 'Myriad Pro'; }
+
+.products-caption .carousel-caption {
+  top: 10%;
+  width: 35%;
+  text-align: left;
+  color: #242424;
   left: 55%;
   font-family: 'Myriad Pro'; }
 
@@ -219,10 +233,10 @@ ol.carousel-indicators.text-center {
 
 .carousel-caption p {
   font-size: 18px;
-  width: 75%; }
+  width: 60%; }
 
 .carousel-price-badge {
-  padding: 30px 15px;
+  padding: 35px 18px;
   border-radius: unset;
   overflow: overlay;
   background-color: #57c5a0; }
@@ -245,6 +259,28 @@ ol.carousel-indicators.text-center {
 .subtext-indicators {
   font-size: 18px;
   color: #6c757d; }
+
+button#dropdownFilterButton {
+  background-color: #242424;
+  border-color: #242424;
+  border-radius: unset;
+  padding: 20px; }
+
+button#dropdownFilterButton:hover {
+  color: #57c5a0;
+  transition: .8s;
+  border-color: #57c5a0; }
+
+button#dropdownFilterButton:active {
+  border-color: #57c5a0; }
+
+button#dropdownFilterButton:focus {
+  border-color: #57c5a0;
+  box-shadow: unset; }
+
+.filter-dropdown .dropdown-item:hover {
+  color: #57c5a0 !important;
+  transition: .8s; }
 
 /* Static Content */
 .thumbnail {
@@ -279,6 +315,15 @@ p.offers-text:hover {
 #products {
   padding-top: 3em; }
 
+.color-wrapper {
+  background-color: #ebe7df; }
+
+.breadcrumb {
+  background-color: unset; }
+
+.breadcrumb-item a {
+  color: #57c5a0; }
+
 #products h3 {
   padding-bottom: 0.8rem;
   font-family: "Myriad Pro"; }
@@ -286,12 +331,41 @@ p.offers-text:hover {
 .show-all-button {
   padding: 5px 50px;
   border-radius: unset;
-  color: rgba(188, 181, 167, 0.9);
-  border-color: rgba(188, 181, 167, 0.9);
+  color: #bcb5a7;
+  border-color: #bcb5a7;
   transition: .8s; }
+
+.fa-th-large:before {
+  color: #bcb5a7;
+  content: "\f009";
+  font-size: 22px;
+  margin: 10px;
+  transition: .8s; }
+
+.fa-th-large:hover:before {
+  color: #57c5a0;
+  cursor: pointer;
+  transition: .8s; }
+
+.fa-list:before {
+  content: "\f03a";
+  color: #bcb5a7;
+  font-size: 22px;
+  margin-right: 2rem; }
+
+.fa-list:hover:before {
+  color: #57c5a0;
+  transition: .8s;
+  cursor: pointer; }
 
 .product-title-row {
   padding-bottom: 1rem; }
+
+.product-title-row .breadcrumb-item, .view-as {
+  color: #bcb5a7; }
+
+.breadcrumb-item.active {
+  color: #bcb5a7; }
 
 .first-product-row {
   padding-bottom: 1rem; }
@@ -301,6 +375,16 @@ p.offers-text:hover {
   color: #57c5a0;
   border-color: #57c5a0;
   background-color: #fff; }
+
+.show-all-button::after {
+  display: inline-block;
+  margin-left: .455em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent; }
 
 .product-bottom-section {
   border-top: 1px solid #cccccc; }
@@ -418,17 +502,33 @@ span.badge.badge-secondary.date-badge {
   transition: all 1s ease-in-out; }
 
 .tweet.show {
-  display: block; 
-}
+  display: block; }
 
 .tweet.animate {
-  opacity: 1; 
-}
+  opacity: 1; }
 
+.twitter-date {
+  color: #a4a5a0;
+  font-size: 13px; }
+
+.twitter-date:hover {
+  color: #fff;
+  transition: .7s;
+  cursor: pointer; }
+
+.twitter-link {
+  color: #57c5a0;
+  transition: .8s; }
+
+.twitter-link:hover {
+  color: #fff;
+  cursor: pointer; }
+
+.timeline-Header-title {
+  color: #fff; }
 
 img.img-fluid.flickr-widget {
-  width: 100%; 
-}
+  width: 100%; }
 
 .modal-body.modal-body-popup {
   background-color: #242424 !important;
@@ -454,6 +554,10 @@ input.form-control.email-input {
   border-radius: unset;
   background-color: #2e2e2e;
   border-color: #242424; }
+
+input#email-input:focus {
+  border-color: #57c5a0;
+  box-shadow: unset; }
 
 span.input-group-btn.submit-button {
   background-color: #7d7d7d;
@@ -484,10 +588,8 @@ span.input-group-btn.submit-button:hover {
   background-color: #2e2e2e; }
 
 .footer-menu p {
+  float: right;
   margin: 0px; }
-
-.col-md-6.footer-menu p {
-  float: right; }
 
 .copyright-col p {
   margin: 0px; }
@@ -500,5 +602,76 @@ span.input-group-btn.submit-button:hover {
 .footer-menu a:hover {
   color: #fff !important;
   transition: .8s; }
+
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+  .navbar-nav {
+    flex-direction: row; }
+
+  .navbar-nav .dropdown-menu {
+    position: absolute; }
+
+  .main-menu {
+    padding: 0px 0px; }
+
+  div#navbarNav {
+    padding: 15px 0px; }
+
+  .main-menu a.nav-link {
+    padding-right: 2rem !important; }
+
+  .homepage-caption .carousel-caption {
+    width: 45%;
+    top: 0%; }
+
+  .carousel-price-badge {
+    padding: 26px 10px; }
+
+  .carousel-caption p {
+    font-size: 16px;
+    width: 100%; }
+
+  .carousel-caption h5 {
+    font-size: 28px; }
+
+  .offers-caption {
+    top: 10%; }
+
+  .product-price-badge {
+    padding: 25px 5px; }
+
+  .product-sale-badge {
+    padding: 27px 5px; }
+
+  .product-out-badge {
+    padding: 20px 10px; }
+
+  p.product-title {
+    position: relative;
+    left: 45%; }
+
+  .product-icons i {
+    padding: 0rem 0.3rem; }
+
+  .free-shipping-col {
+    flex: 0 0 50%;
+    max-width: 50%; }
+
+  .testimonials-col {
+    flex: 0 0 50%;
+    max-width: 50%; }
+
+  #blog-news {
+    margin-top: 1rem; }
+
+  .blog-news-col {
+    max-width: 100%;
+    flex: 0 0 100%; }
+
+  .row-social-media .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%; }
+
+  .copyright-col p {
+    font-size: 14px; } }
 
 /*# sourceMappingURL=styles.css.map */

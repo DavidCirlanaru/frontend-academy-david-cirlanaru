@@ -25,11 +25,11 @@ $footer-paragraph: #939393;
 $footer-heading: #7d7d7d;
 $footer-dates: #a4a5a0;
 $orange: #F27E4B;
-
+$text-gray: #bcb5a7;
 /* General */
 body {
     font-family: 'Aller', sans-serif;
-    background-color: $background-white;
+    background-color: #fff;
 }
 
 .container-general {
@@ -45,6 +45,7 @@ body {
 
 .navbar-brand {
     color: #57c5a0 !important;
+    font-family: 'Myriad Pro';
 }
 .navbar-brand:hover {
     color: #fff !important;
@@ -86,12 +87,18 @@ button.btn.btn-default.dropdown-toggle.search-button {
     padding: 2px;
 }
 
+.filter-heading {
+    color: #fff;
+    font-family: 'Myriad Pro';
+    margin: 0;
+}
+
 button#dropdownMenuButton {
     color: $blog-grey;
 }
 
 .dropdown-menu.show {
-    background-color: #4c4c4c;
+    background-color: $strong-dark;
 }
 
 a.dropdown-item {
@@ -101,7 +108,7 @@ a.dropdown-item {
 
 .dropdown-item:focus, .dropdown-item:hover {
     background-color: unset;
-    color: #ffffff;
+    color: $green;
     transition: .8s;
 }
 
@@ -274,7 +281,7 @@ ol.carousel-indicators.text-center {
     margin: 0 auto;
 }
 
-.carousel-caption.d-none.d-md-block {
+.homepage-caption .carousel-caption {
     width: 35%;
     text-align: left;
     color: $strong-dark;
@@ -283,17 +290,27 @@ ol.carousel-indicators.text-center {
     font-family: 'Myriad Pro';
 }
 
+.products-caption .carousel-caption {
+    top: 10%;
+    width: 35%;
+    text-align: left;
+    color: $strong-dark;
+    left: 55%;
+    font-family: 'Myriad Pro';
+}
+
+    
 .carousel-caption h5 {
     font-size: 48px;
  }
 
 .carousel-caption p {
     font-size: 18px;
-    width: 75%;
-    }
+    width: 60%;
+}
 
 .carousel-price-badge {
-    padding: 30px 15px;
+    padding: 35px 18px;
     border-radius: unset;
     overflow: overlay;
     background-color: #57c5a0;
@@ -319,6 +336,34 @@ ol.carousel-indicators.text-center {
 .subtext-indicators {
     font-size: 18px;
     color: #6c757d;
+}
+
+//Button filters
+button#dropdownFilterButton {
+    background-color: $strong-dark;
+    border-color: $strong-dark;
+    border-radius: unset;
+    padding: 20px;
+}
+
+button#dropdownFilterButton:hover {
+    color: $green;
+    transition: .8s;
+    border-color: $green;
+}
+
+button#dropdownFilterButton:active {
+    border-color: $green;
+}
+
+button#dropdownFilterButton:focus {
+    border-color: $green;
+    box-shadow: unset;
+}
+
+.filter-dropdown .dropdown-item:hover {
+    color: $green !important;
+    transition: .8s;
 }
 
 /* Static Content */
@@ -364,6 +409,18 @@ p.offers-text:hover {
     padding-top: $container-space;
 }
 
+.color-wrapper {
+    background-color: $background-white;
+}
+
+.breadcrumb {
+    background-color: unset;
+}
+
+.breadcrumb-item a {
+    color: $green;
+}
+
 #products h3 {
     padding-bottom: 0.8rem;
     font-family: 'Myriad Pro'
@@ -372,13 +429,48 @@ p.offers-text:hover {
 .show-all-button {
     padding: 5px 50px;
     border-radius: unset;
-    color: rgba(188, 181, 167, 0.9);
-    border-color: rgba(188, 181, 167, 0.9);
+    color: $text-gray;
+    border-color: $text-gray;
     transition: .8s;
+}
+
+.fa-th-large:before {
+    color:$text-gray;
+    content: "\f009";
+    font-size: 22px;
+    margin: 10px;
+    transition: .8s;
+}
+
+.fa-th-large:hover:before {
+    color: $green;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.fa-list:before {
+    content: "\f03a";
+    color: $text-gray;
+    font-size: 22px;
+    margin-right: 2rem
+}
+
+.fa-list:hover:before {
+    color: $green;
+    transition: .8s;
+    cursor: pointer;
 }
 
 .product-title-row {
     padding-bottom: 1rem;
+}
+
+.product-title-row .breadcrumb-item, .view-as {
+    color: $text-gray;
+}
+
+.breadcrumb-item.active {
+    color: $text-gray;
 }
 
 .first-product-row {
@@ -390,6 +482,17 @@ p.offers-text:hover {
     color: $green;
     border-color: $green;
     background-color: #fff;
+}
+
+.show-all-button::after {
+    display: inline-block;
+    margin-left: .455em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
 }
 
 .product-bottom-section {
@@ -606,6 +709,11 @@ input.form-control.email-input {
     border-color: $strong-dark;
 }
 
+input#email-input:focus {
+    border-color: $green;
+    box-shadow: unset;
+}
+
 span.input-group-btn.submit-button {
     background-color: $footer-heading;
     padding: 6px;
@@ -641,12 +749,10 @@ span.input-group-btn.submit-button:hover {
     background-color: $light-dark;
 }
 
-.footer-menu p {
-    margin: 0px;
-}
 
-.col-md-6.footer-menu p {
+.footer-menu p {
     float: right;
+    margin: 0px;
 }   
 
 .copyright-col p {
@@ -663,3 +769,98 @@ span.input-group-btn.submit-button:hover {
     color: #fff !important;
     transition: .8s;
 }
+
+// ========Responsive==========
+@media screen and (min-width: 960px) and (max-width: 1024px) { 
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+
+    .main-menu {
+        padding: 0px 0px;
+    }
+
+    div#navbarNav {
+        padding: 15px 0px;
+    }
+    .main-menu a.nav-link {
+        padding-right: 2rem !important;
+    }
+
+    .homepage-caption .carousel-caption {
+        width: 45%;
+        top: 0%;
+    }
+
+    .carousel-price-badge {
+        padding: 26px 10px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .carousel-caption h5 {
+        font-size: 28px;
+    }
+
+    .offers-caption {
+        top: 10%;
+    }
+
+    .product-price-badge {
+        padding: 25px 5px;
+    }
+
+    .product-sale-badge {
+        padding: 27px 5px;
+    }
+
+    .product-out-badge {
+        padding: 20px 10px;
+    }
+
+    p.product-title {
+        position: relative;
+        left: 45%;
+    }
+
+    .product-icons i {
+        padding: 0rem 0.3rem;
+    }
+
+    .free-shipping-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .testimonials-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    #blog-news {
+        margin-top: 1rem;
+    }
+
+    .blog-news-col {
+        max-width:100%;
+        flex: 0 0 100%;
+    }
+
+    .row-social-media .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .copyright-col p {
+        font-size: 14px;
+    }
+
+ }
