@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
 	//search input dropdown
 	document.getElementById("searchInput").oninput = function () {
 		$(this).next('.dropdown-menu').find('[data-toggle=dropdown]').dropdown('toggle');
@@ -14,6 +13,7 @@ $(document).ready(function () {
 						output += '<a class="dropdown-item" href="#">' + value.name + '</a>';
 					});
 				});
+				
 				document.getElementById('search-dropdown-menu').innerHTML = output;
 			}
 		});

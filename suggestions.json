@@ -1,12 +1,17 @@
-is everyone using a css reset / normalizer?
-are you all using 4 spaces instead of tabs
-have you tried linting your JS code with ESLint
-is your code written in a compact format 
-many whitespace not needed?
-
-!!is commented code deleted from the repo since its not needed there?
-are you using sass instead of just css?
-have you properly tested for responsive bugs with f12 in chrome?
-
-
-!! !VEZI DROpdown la search
+[
+    {
+      "name":"High Heels"
+    },
+    {
+      "name":"Black Shoes"
+    },
+    {
+      "name":"Red Shoes"
+    },
+    {
+      "name":"Green Shoes"
+    },
+    {
+      "name":"Yellow Shoes"
+    }
+  ] 
