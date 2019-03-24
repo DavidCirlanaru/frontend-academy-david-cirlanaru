@@ -10,7 +10,7 @@ $(document).ready(function () {
 			success: function(data) {
 				$.each(data, function(index, item){
 					$.each(item, function(key, value){
-						output += '<a class="dropdown-item" href="#">' + value.name + '</a>';
+						output += '<a class="dropdown-item" href="#">' + value + '</a>';
 					});
 				});
 				

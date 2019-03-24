@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>FooShoes</title>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.ico" sizes="64x64"/>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico" sizes="64x64" />
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,39 +18,40 @@
 
 <body>
   <!-- Top Bar -->
-   <nav class="navbar navbar-expand-lg navbar-dark static-top top-bar justify-content-between">     
+  <nav class="navbar navbar-expand-lg navbar-dark static-top top-bar justify-content-between">
     <div class="container top-bar-container">
-      <a class="navbar-brand logo" href="#">FOOSESHOES</a>
+      <a class="navbar-brand logo" href="./">FOOSESHOES</a>
       <div class="row">
-      <ul class="navbar-nav">
-        <li class="nav-item ml-auto mr-1">
-          <div class="form-group search-container">
-            <div class="input-group search-group">
-              <form role="form">
-                <div class="input-group">
-                  <input id="searchInput" data-toggle="dropdown" type="text" class="form-control search-input"
-                    placeholder="SEARCH">
-                  <div class="input-group-btn">
-                    <button type="button" class="btn btn-default dropdown-toggle search-button" data-toggle="dropdown">
-                      <i class="fas fa-search search-icon"></i>
-                    </button>
-                    <ul id="search-dropdown-menu" class="dropdown-menu dropdown-menu-right" role="menu">
-                      <a class="dropdown-item" href="#">MAN SHOES</a>
-                      <a class="dropdown-item" href="#">KIDS</a>
-                    </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item ml-auto mr-1">
+            <div class="form-group search-container">
+              <div class="input-group search-group">
+                <form role="form">
+                  <div class="input-group search">
+                    <input id="searchInput" data-toggle="dropdown" type="text" class="form-control search-input"
+                      placeholder="SEARCH">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default dropdown-toggle search-button"
+                        data-toggle="dropdown">
+                        <i class="fas fa-search search-icon"></i>
+                      </button>
+                      <ul id="search-dropdown-menu" class="dropdown-menu dropdown-menu-right" role="menu">
+                        <a class="dropdown-item" href="#">MAN SHOES</a>
+                        <a class="dropdown-item" href="#">KIDS</a>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="nav-item login-link">
-          <a class="nav-link login-link" data-toggle="modal" data-target="#loginModal" href="#">LOGIN or REGISTER</a>
-        </li>
-      </ul>
+          </li>
+          <li class="nav-item login-link">
+            <a class="nav-link login-link" data-toggle="modal" data-target="#loginModal" href="#">LOGIN or REGISTER</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    </div>
-  </nav> 
+  </nav>
 
   <!-- Login Popup -->
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
@@ -85,74 +86,60 @@
   </div>
 
   <!-- Navigation -->
-  <!-- <nav class="navbar navbar-expand-lg navbar-light main-menu static-top navbar-expand-md">
-    <div class="container">
-      <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="./index">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./products">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-
-        </ul>
-        <ul class="navbar-nav shopping-menu-items">
-          <li class="nav-item star-icon ml-auto">
-            <a>
-              <i class="far fa-star"></i><span class="badge badge-secondary favorite-badge">5</span>
+  <nav class="navigation">
+    <div class="container-fluid">
+      <div class="container">
+        <ul class="menu big-screen-menu">
+          <li class="border-menu-item"><a href="./">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="shopping-items border-menu-item  ml-auto">
+            <a href="#">
+              <i class="far fa-star"></i>
+              <span class="badge badge-secondary favorite-badge">5</span>
             </a>
           </li>
-          <li class="nav-item star-icon ml-auto">
-            <a class=""><i class="fas fa-shopping-cart"></i></a><span
-              class="badge badge-secondary cart-badge">0</span></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-
-  <nav class="navigation">
-      <div class="container-fluid">
-    <div class="container">
-      <ul class="menu">
-        <li class="border-menu-item"><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-        <li class="shopping-items border-menu-item  ml-auto">
-          <a href="#">
-            <i class="far fa-star"></i>
-            <span class="badge badge-secondary favorite-badge">5</span>
-          </a>
-        </li>
-        <li class="shopping-items">
+          <li class="shopping-items">
             <a href="#">
               <i class="fas fa-shopping-cart"></i>
               <span class="badge badge-secondary cart-badge">0</span>
             </a>
-        </li>
-
-
-      </ul><!-- .menu -->
+          </li>
+        </ul>
+        <ul class="menu small-screen-menu">
+            <div class="dropdown show">
+                <a class=" dropdown-toggle dropdown-button" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="./">Home</a></li>
+                  <li><a class="dropdown-item" href="products.html">Products</a></li>
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a class="dropdown-item" href="#">Pages</a></li>
+                  <li><a class="dropdown-item" href="#">Blog</a></li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </div>
+              </div>
+            <li class="shopping-items border-menu-item  ml-auto">
+              <a href="#">
+                <i class="far fa-star"></i>
+                <span class="badge badge-secondary favorite-badge">5</span>
+              </a>
+            </li>
+            <li class="shopping-items">
+              <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge badge-secondary cart-badge">0</span>
+              </a>
+            </li>
+          </ul><!-- .menu -->
       </div>
     </div>
-    </nav><!-- .navigation -->
+  </nav><!-- .navigation -->
 
   <!-- Page Content -->
   <!-- Carousel -->
@@ -242,353 +229,357 @@
 
   <!-- Products Section -->
   <div class="color-wrapper">
-  <div id="products" class="container">
-    <div class="row product-title-row">
-      <div class="col-md-6">
-        <h3>New Arrival on FooseShoes</h3>
-      </div>
+    <div id="products" class="container">
+      <div class="row product-title-row">
+        <div class="col-md-6 row-title">
+          <h3>New Arrival on FooseShoes</h3>
+        </div>
 
-      <div class="col-md-6 text-right">
-        <button type="button" class="btn btn-outline-secondary show-all-button ">Show all</button>
-      </div>
-    </div>
-    <div class="row first-product-row">
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow"><span class="badge badge-secondary product-sale-badge"
-            style="display: none">ON SALE!</span>
-          <img class="card-img-top" src="img/item1.png" alt="Card image cap">
-          <div class="card-body product-bottom-section text-right product-title-container">
-            <div class="d-flex align-items-center ">
-              <span class="badge badge-secondary product-price-badge">$145.99</span>
-              <p class="product-title" style="display: inline">Even & Odd</p>
-            </div>
-            <div class="btn-group product-icons" style="display: none">
-              <i class="fas fa-eye"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-share-square"></i>
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-          </div>
+        <div class="col-md-6 text-right">
+          <button type="button" class="btn btn-outline-secondary show-all-button ">Show all</button>
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow"><span class="badge badge-secondary product-sale-badge">ON SALE!</span>
-          <img class="card-img-top" src="img/item1.png" alt="Card image cap">
-          <div class="card-body product-bottom-section text-right product-title-container ">
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge badge-secondary product-price-badge">$145.99</span>
-              <p class="product-title">Even & Odd</p>
-            </div>
-            <div class="btn-group product-icons" style="display: none">
-              <i class="fas fa-eye"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-share-square"></i>
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow"><span style="display: none"
-            class="badge badge-secondary product-sale-badge">ON SALE!</span>
-          <img class="card-img-top" src="img/item1.png" alt="Card image cap">
-          <div class="card-body product-bottom-section text-right product-title-container">
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge badge-secondary product-price-badge">$145.99</span>
-              <p class="product-title">Even & Odd</p>
-            </div>
-            <div class="btn-group product-icons" style="display: none">
-              <i class="fas fa-eye"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-share-square"></i>
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row product-title-row">
-      <div class="col-md-6">
-        <h3>Best sellers of the month</h3>
-      </div>
-
-      <div class="col-md-6 text-right">
-        <button type="button" class="btn btn-outline-secondary show-all-button ">Show all</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow"><span style="display: none"
-            class="badge badge-secondary product-sale-badge">ON SALE!</span>
-          <img class="card-img-top" src="img/item4.png" alt="Card image cap">
-          <div class="card-body product-bottom-section text-right product-title-container">
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge badge-secondary product-price-badge">$145.99</span>
-              <p class="product-title">Even & Odd</p>
-            </div>
-            <div class="btn-group product-icons" style="display: none">
-              <i class="fas fa-eye"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-share-square"></i>
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow"><span style="display: none"
-            class="badge badge-secondary product-sale-badge">ON SALE!</span>
-          <img class="card-img-top" src="img/item4.png" alt="Card image cap">
-          <div class="card-body product-bottom-section text-right product-title-container">
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge badge-secondary product-price-badge">$145.99</span>
-              <p class="product-title">Even & Odd</p>
-            </div>
-            <div class="btn-group product-icons" style="display: none">
-              <i class="fas fa-eye"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-share-square"></i>
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow"><span class="badge badge-secondary product-out-badge">OUT OF<br> STOCK</span>
-          <img class="card-img-top" src="img/item4.png" alt="Card image cap">
-          <div class="card-body product-bottom-section text-right product-title-container">
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge badge-secondary product-price-badge">$145.99</span>
-              <p class="product-title">Even & Odd</p>
-            </div>
-            <div class="btn-group product-icons" style="display: none">
-              <i class="fas fa-eye"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-share-square"></i>
-              <i class="fas fa-shopping-cart"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Line Breaker -->
-  <div class="container line-break">
-    <hr>
-  </div>
-
-  <!-- Blog Section -->
-  <div class="container blog-container">
-    <div class="row blog-row row-eq-height">
-      <div class="col-lg-3 blog-col free-shipping-col">
-        <div class="col-md-12 blog-boxes">
-          <h3>FREE SHIPPING</h3>
-          <p class="text-align-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum
-            has been the industry's standard dummy text ever since the 1500s.with the release of Letraset sheets
-            containing Lorem Ipsum</p>
-        </div>
-      </div>
-
-      <div class="col-md-3 testimonials-col">
-        <div class="col-md-12 blog-boxes card">
-          <h3>TESTIMONIALS</h3>
-          <p class="text-align-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum <br><i>- John Doe
-              -</i></p>
-        </div>
-      </div>
-
-      <div class="col-md-6 blog-col blog-news-col">
-        <div id="blog-news" class="col-md-12 blog-boxes">
-          <h3 class="mb-4">BLOG NEWS</h3>
-          <div class="row align-items-center blog-titles mt-3">
-            <div class="col-md-2">
-              <span class="badge badge-secondary date-badge">APR<br>10</span>
-            </div>
-            <div class="col-md-10  blog-text-column">
-              <h5>#1 Nice & Clean. The best for your blog! </h5>
-              <p>Lorem Ipsum is simply dummy text of the printing.</p>
-            </div>
-          </div>
-          <div class="row align-items-center blog-titles mt-3">
-            <div class="col-md-2">
-              <span class="badge badge-secondary date-badge">APR<br>11</span>
-            </div>
-            <div class="col-md-10 blog-text-column">
-              <h5>#2 What an Ecommerce theme! </h5>
-              <p>Lorem Ipsum has been the standard dummy text.</p>
-            </div>
-          </div>
-          <div class="row align-items-center blog-titles mt-3">
-            <div class="col-md-2">
-              <span class="badge badge-secondary date-badge">APR<br>12</span>
-            </div>
-            <div class="col-md-10 blog-text-column">
-              <h5>#3 New content every 5 seconds!</h5>
-              <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
-            </div>
-          </div>
-          <div class="row align-items-center blog-titles mt-3">
-            <div class="col-md-2">
-              <span class="badge badge-secondary date-badge">APR<br>13</span>
-            </div>
-            <div class="col-md-10 blog-text-column">
-              <h5>#4 New content every 5 seconds!</h5>
-              <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
-            </div>
-          </div>
-          <div class="row align-items-center blog-titles mt-3">
-            <div class="col-md-2">
-              <span class="badge badge-secondary date-badge">APR<br>14</span>
-            </div>
-            <div class="col-md-10 blog-text-column">
-              <h5>#5 What an Ecommerce theme!</h5>
-              <p>Lorem Ipsum has been the standard dummy text.</p>
-            </div>
-          </div>
-          <div class="row align-items-center blog-titles mt-3">
-            <div class="col-md-2">
-              <span class="badge badge-secondary date-badge">APR<br>15</span>
-            </div>
-            <div class="col-md-10 blog-text-column">
-              <h5>#6 New content every 5 seconds!</h5>
-              <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
-            </div>
-          </div>
-          <div class="row align-items-center blog-titles mt-3">
-            <div class="col-md-2">
-              <span class="badge badge-secondary date-badge">APR<br>16</span>
-            </div>
-            <div class="col-md-10 blog-text-column">
-              <h5>#7 New content every 5 seconds!</h5>
-              <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- /Blog Section -->
-
-  <!-- Footer Section-->
-  <div class="container-fluid footer-section">
-    <div class="container">
-      <div class="row row-eq-height">
+      <div class="row first-product-row">
         <div class="col-md-4">
-          <h3>TEXT WIDGET</h3>
-          <p class="text-justify"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum
-              has been the industry's standard dummy text ever since the 1500s.with the release of Letraset sheets
-              containing Lorem Ipsum tandard dummy text ever since the 1500s.</i></p>
-        </div>
-
-        <div id="tweets-container" class="col-md-4">
-          <h3>TWITTER WIDGET</h3>
-          <div class="tweet">
-            <a class="twitter-timeline" 
-            href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw" data-width="auto"
-            data-height="auto" data-link-color="#57c5a0" data-theme="dark" data-chrome="transparent noscrollbar nofooter">
-            National Park Tweets - Curated tweets by TwitterDev</a> 
-          </div>
-          <div class="tweet">
-              <a class="twitter-timeline" 
-              href="https://twitter.com/NYTNow/timelines/576828964162965504?ref_src=twsrc%5Etfw" data-width="auto"
-              data-height="auto" data-link-color="#57c5a0" data-theme="dark" data-chrome="transparent noscrollbar nofooter">
-              National Park Tweets - Curated tweets by TwitterDev</a> 
+          <div class="card mb-4 box-shadow"><span class="badge badge-secondary product-sale-badge"
+              style="display: none">ON SALE!</span>
+            <img class="card-img-top" src="img/item1.png" alt="Card image cap">
+            <div class="card-body product-bottom-section text-right product-title-container">
+              <div class="d-flex align-items-center ">
+                <span class="badge badge-secondary product-price-badge">$145.99</span>
+                <p class="product-title" style="display: inline">Even & Odd</p>
+              </div>
+              <div class="btn-group product-icons" style="display: none">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-share-square"></i>
+                <i class="fas fa-shopping-cart"></i>
+              </div>
             </div>
+          </div>
         </div>
 
         <div class="col-md-4">
-          <h3>FLICKR WIDGET</h3>
-          <div class="col mb-2 flickr-col">
-            <a href="#" class="pop">
-              <img src="img/flickr1.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
-            </a>
-
-            <a href="#" class="pop">
-              <img src="img/flickr2.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
-            </a>
-
-            <a href="#" class="pop mb-">
-              <img src="img/flickr3.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
-            </a>
+          <div class="card mb-4 box-shadow"><span class="badge badge-secondary product-sale-badge">ON SALE!</span>
+            <img class="card-img-top" src="img/item1.png" alt="Card image cap">
+            <div class="card-body product-bottom-section text-right product-title-container ">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge badge-secondary product-price-badge">$145.99</span>
+                <p class="product-title">Even & Odd</p>
+              </div>
+              <div class="btn-group product-icons" style="display: none">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-share-square"></i>
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
           </div>
-          <div class="w-100"></div>
-          <div class="col flickr-col">
-            <a href="#" class="pop">
-              <img src="img/flickr4.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
-            </a>
+        </div>
 
-            <a href="#" class="pop">
-              <img src="img/flickr5.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
-            </a>
-
-            <a href="#" class="pop">
-              <img src="img/flickr6.jpg" class="img-fluid" style="max-width: 30%; height: auto;">
-            </a>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow"><span style="display: none"
+              class="badge badge-secondary product-sale-badge">ON SALE!</span>
+            <img class="card-img-top" src="img/item1.png" alt="Card image cap">
+            <div class="card-body product-bottom-section text-right product-title-container">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge badge-secondary product-price-badge">$145.99</span>
+                <p class="product-title">Even & Odd</p>
+              </div>
+              <div class="btn-group product-icons" style="display: none">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-share-square"></i>
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
           </div>
-          <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content modal-pupup">
-                <div class="modal-body modal-body-popup">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
-                      class="sr-only">Close</span></button>
-                  <img src="" class="imagepreview" style="width: 100%;">
-                </div>
+        </div>
+      </div>
+      <div class="row product-title-row">
+        <div class="col-md-6">
+          <h3>Best sellers of the month</h3>
+        </div>
+
+        <div class="col-md-6 text-right">
+          <button type="button" class="btn btn-outline-secondary show-all-button ">Show all</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow"><span style="display: none"
+              class="badge badge-secondary product-sale-badge">ON SALE!</span>
+            <img class="card-img-top" src="img/item4.png" alt="Card image cap">
+            <div class="card-body product-bottom-section text-right product-title-container">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge badge-secondary product-price-badge">$145.99</span>
+                <p class="product-title">Even & Odd</p>
+              </div>
+              <div class="btn-group product-icons" style="display: none">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-share-square"></i>
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow"><span style="display: none"
+              class="badge badge-secondary product-sale-badge">ON SALE!</span>
+            <img class="card-img-top" src="img/item4.png" alt="Card image cap">
+            <div class="card-body product-bottom-section text-right product-title-container">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge badge-secondary product-price-badge">$145.99</span>
+                <p class="product-title">Even & Odd</p>
+              </div>
+              <div class="btn-group product-icons" style="display: none">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-share-square"></i>
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow"><span class="badge badge-secondary product-out-badge">OUT OF<br>
+              STOCK</span>
+            <img class="card-img-top" src="img/item4.png" alt="Card image cap">
+            <div class="card-body product-bottom-section text-right product-title-container">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge badge-secondary product-price-badge">$145.99</span>
+                <p class="product-title">Even & Odd</p>
+              </div>
+              <div class="btn-group product-icons" style="display: none">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-share-square"></i>
+                <i class="fas fa-shopping-cart"></i>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <hr class="footer-linebreak">
-    <div class="container social-media-section">
-      <div class="row justify-content-between row-social-media">
-        <div class="col-md-4 text-white">
-          <form id="newsletter-form" class="needs-validation"  action="#" method="post">
-          <div class="input-group">
-            <input id="email-input" type="text" class="form-control email-input" placeholder="Enter email for newsletter">
-            <span class="input-group-btn submit-button">
-              <button id="submit-button" type="submit" class="btn">
-                <i class="fas fa-angle-right"></i>
-              </button>
-            </span>
+
+    <!-- Line Breaker -->
+    <div class="container line-break">
+      <hr>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="container blog-container">
+      <div class="row blog-row row-eq-height">
+        <div class="col-lg-3 blog-col free-shipping-col">
+          <div class="col-md-12 blog-boxes">
+            <h3>FREE SHIPPING</h3>
+            <p class="text-align-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum
+              has been the industry's standard dummy text ever since the 1500s.with the release of Letraset sheets
+              containing Lorem Ipsum</p>
           </div>
-        </form>
         </div>
 
-        <div class="col-md-4 text-white text-center ">
-          <div class="input-group social-icons-container">
-            <div class="col-2">
-              <a><i class="fab fa-facebook-square social-icon"></i></a>
-            </div>
-            <div class="col-2">
-              <i class="fab fa-twitter-square social-icon"></i>
-            </div>
-            <div class="col-2">
-              <i class="fab fa-google-plus-square social-icon"></i>
-            </div>
+        <div class="col-md-3 testimonials-col">
+          <div class="col-md-12 blog-boxes card">
+            <h3>TESTIMONIALS</h3>
+            <p class="text-align-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum <br><i>- John Doe
+                -</i></p>
+          </div>
+        </div>
 
-            <div class="col-2">
-              <i class="fab fa-linkedin social-icon"></i>
+        <div class="col-md-6 blog-col blog-news-col">
+          <div id="blog-news" class="col-md-12 blog-boxes">
+            <h3 class="mb-4">BLOG NEWS</h3>
+            <div class="row align-items-center blog-titles mt-3">
+              <div class="col-md-2">
+                <span class="badge badge-secondary date-badge">APR<br>10</span>
+              </div>
+              <div class="col-md-10  blog-text-column">
+                <h5>#1 Nice & Clean. The best for your blog! </h5>
+                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+              </div>
             </div>
-            <div class="col-2">
-              <i class="fab fa-flickr social-icon"></i>
+            <div class="row align-items-center blog-titles mt-3">
+              <div class="col-md-2">
+                <span class="badge badge-secondary date-badge">APR<br>11</span>
+              </div>
+              <div class="col-md-10 blog-text-column">
+                <h5>#2 What an Ecommerce theme! </h5>
+                <p>Lorem Ipsum has been the standard dummy text.</p>
+              </div>
+            </div>
+            <div class="row align-items-center blog-titles mt-3">
+              <div class="col-md-2">
+                <span class="badge badge-secondary date-badge">APR<br>12</span>
+              </div>
+              <div class="col-md-10 blog-text-column">
+                <h5>#3 New content every 5 seconds!</h5>
+                <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
+              </div>
+            </div>
+            <div class="row align-items-center blog-titles mt-3">
+              <div class="col-md-2">
+                <span class="badge badge-secondary date-badge">APR<br>13</span>
+              </div>
+              <div class="col-md-10 blog-text-column">
+                <h5>#4 New content every 5 seconds!</h5>
+                <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
+              </div>
+            </div>
+            <div class="row align-items-center blog-titles mt-3">
+              <div class="col-md-2">
+                <span class="badge badge-secondary date-badge">APR<br>14</span>
+              </div>
+              <div class="col-md-10 blog-text-column">
+                <h5>#5 What an Ecommerce theme!</h5>
+                <p>Lorem Ipsum has been the standard dummy text.</p>
+              </div>
+            </div>
+            <div class="row align-items-center blog-titles mt-3">
+              <div class="col-md-2">
+                <span class="badge badge-secondary date-badge">APR<br>15</span>
+              </div>
+              <div class="col-md-10 blog-text-column">
+                <h5>#6 New content every 5 seconds!</h5>
+                <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
+              </div>
+            </div>
+            <div class="row align-items-center blog-titles mt-3">
+              <div class="col-md-2">
+                <span class="badge badge-secondary date-badge">APR<br>16</span>
+              </div>
+              <div class="col-md-10 blog-text-column">
+                <h5>#7 New content every 5 seconds!</h5>
+                <p>Lorem ipsum is placeholder text commonly used in the graphic..</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- /Blog Section -->
+
+    <!-- Footer Section-->
+    <div class="container-fluid footer-section">
+      <div class="container">
+        <div class="row row-eq-height">
+          <div class="col-md-4">
+            <h3>TEXT WIDGET</h3>
+            <p class="text-justify"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum
+                has been the industry's standard dummy text ever since the 1500s.with the release of Letraset sheets
+                containing Lorem Ipsum tandard dummy text ever since the 1500s.</i></p>
+          </div>
+
+          <div id="tweets-container" class="col-md-4">
+            <h3>TWITTER WIDGET</h3>
+            <div class="tweet">
+              <a class="twitter-timeline"
+                href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw" data-width="auto"
+                data-height="auto" data-link-color="#57c5a0" data-theme="dark"
+                data-chrome="transparent noscrollbar nofooter">
+                National Park Tweets - Curated tweets by TwitterDev</a>
+            </div>
+            <div class="tweet">
+              <a class="twitter-timeline"
+                href="https://twitter.com/NYTNow/timelines/576828964162965504?ref_src=twsrc%5Etfw" data-width="auto"
+                data-height="auto" data-link-color="#57c5a0" data-theme="dark"
+                data-chrome="transparent noscrollbar nofooter">
+                National Park Tweets - Curated tweets by TwitterDev</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h3>FLICKR WIDGET</h3>
+            <div class="col mb-2 flickr-col">
+              <a href="#" class="pop">
+                <img src="img/flickr1.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
+              </a>
+
+              <a href="#" class="pop">
+                <img src="img/flickr2.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
+              </a>
+
+              <a href="#" class="pop mb-">
+                <img src="img/flickr3.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
+              </a>
+            </div>
+            <div class="w-100"></div>
+            <div class="col flickr-col">
+              <a href="#" class="pop">
+                <img src="img/flickr4.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
+              </a>
+
+              <a href="#" class="pop">
+                <img src="img/flickr5.jpeg" class="img-fluid" style="max-width: 30%; height: auto;">
+              </a>
+
+              <a href="#" class="pop">
+                <img src="img/flickr6.jpg" class="img-fluid" style="max-width: 30%; height: auto;">
+              </a>
+            </div>
+            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content modal-pupup">
+                  <div class="modal-body modal-body-popup">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <img src="" class="imagepreview" style="width: 100%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-linebreak">
+      <div class="container social-media-section">
+        <div class="row justify-content-between row-social-media">
+          <div class="col-md-4 text-white">
+            <form id="newsletter-form" class="needs-validation" action="#" method="post">
+              <div class="input-group">
+                <input id="email-input" type="text" class="form-control email-input"
+                  placeholder="Enter email for newsletter">
+                <span class="input-group-btn submit-button">
+                  <button id="submit-button" type="submit" class="btn">
+                    <i class="fas fa-angle-right"></i>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-4 text-white text-center ">
+            <div class="input-group social-icons-container">
+              <div class="col-2">
+                <a><i class="fab fa-facebook-square social-icon"></i></a>
+              </div>
+              <div class="col-2">
+                <i class="fab fa-twitter-square social-icon"></i>
+              </div>
+              <div class="col-2">
+                <i class="fab fa-google-plus-square social-icon"></i>
+              </div>
+
+              <div class="col-2">
+                <i class="fab fa-linkedin social-icon"></i>
+              </div>
+              <div class="col-2">
+                <i class="fab fa-flickr social-icon"></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   <footer>
     <div class="container-fluid copyright-section">
