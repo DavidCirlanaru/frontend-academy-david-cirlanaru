@@ -359,7 +359,8 @@ ol.carousel-indicators.text-center {
 }
 
 .indicators-container {
-    padding: 1rem 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     background-color: $light-dark;
 }
 
@@ -968,6 +969,9 @@ span.input-group-btn.submit-button:hover {
     .navigation {
         .menu {
           display: flex; 
+          > .shopping-items { 
+              margin-left: unset !important;
+          }
           > li {
             border-width: 0 1px 0 0; 
             > a {
@@ -1177,12 +1181,10 @@ span.input-group-btn.submit-button:hover {
     }
 
     .homepage-caption .carousel-caption {
-        width: 100%;
-        text-align: left;
-        color: #242424;
+        width: 85%;
         top: 1%;
-        left: 12%;
-        font-family: 'Myriad Pro';
+        left: 22%;
+    
     }
     
     .carousel-price-badge {
@@ -1265,7 +1267,7 @@ span.input-group-btn.submit-button:hover {
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
+@media screen and (min-width: 320px) and (max-width: 424px) {
     .navbar-nav {
         flex-direction: row;
         padding: 0px 5px;
@@ -1356,7 +1358,7 @@ span.input-group-btn.submit-button:hover {
     }
 
     .carousel-item img {
-        min-height: 350px;
+        min-height: 400px;
     }
 
     .carousel-caption {
@@ -1364,11 +1366,11 @@ span.input-group-btn.submit-button:hover {
     }
 
     .homepage-caption .carousel-caption {
-        width: 100%;
+        width: 87%;
         text-align: left;
         color: #242424;
         top: 1%;
-        left: 12%;
+        left: 10%;
         font-family: 'Myriad Pro';
     }
     
@@ -1398,7 +1400,7 @@ span.input-group-btn.submit-button:hover {
     }
     
     .text-indicators {
-        width: 7rem;
+        width: 6.5rem;
         font-size: 16px;
     }
     
@@ -1471,5 +1473,14 @@ span.input-group-btn.submit-button:hover {
     .product-title-row .row {
         justify-content: center;
     }
+    
+    p.product-title {
+        position: relative;
+        left: 47%;
+        margin: 0;
+        transition: .8s;
+    }
+    
+    
 }
  
